@@ -1,0 +1,54 @@
+{
+  "name": "Website",
+  "version": "1.0.0",
+  "description": "Julien Sergent personal website",
+  "main": "index.js",
+  "scripts": {
+    "start": "tsc && concurrently \"npm run html\" \"npm run tsc:w\" \"npm run sass\" \"npm run lite\" ",
+    "lite": "lite-server -c bs-config.json",
+    "postinstall": "typings install",
+    "html": "cpx \"src/**/*.html\" public/ -w",
+    "sass": "sass -w src:public",
+    "tsc": "tsc",
+    "tsc:w": "tsc -w",
+    "typings": "typings"
+  },
+  "dependencies": {
+    "@angular/common": "2.0.0",
+    "@angular/compiler": "2.0.0",
+    "@angular/core": "2.0.0",
+    "@angular/forms": "2.0.0",
+    "@angular/http": "2.0.0",
+    "@angular/platform-browser": "2.0.0",
+    "@angular/platform-browser-dynamic": "2.0.0",
+    "@angular/router": "3.0.0",
+    "@angular/upgrade": "2.0.0",
+
+    "core-js": "^2.4.1",
+    "reflect-metadata": "^0.1.3",
+    "rxjs": "5.0.0-beta.12",
+    "systemjs": "0.19.38",
+    "zone.js": "^0.6.23",
+
+    "lodash": "^4.15.0",
+    "ng2-translate": "^2.4.1"
+  },
+  "devDependencies": {
+    "concurrently": "^2.0.0",
+    "gulp-minify-css": "^1.2.4",
+    "lite-server": "^2.2.0",
+    "typescript": "^1.8.10",
+    "typings": "^1.0.4"
+},
+  "keywords": [
+    "web",
+    "design",
+    "developer",
+    "julien",
+    "sergent",
+    "front-end",
+    "back-end"
+  ],
+  "author": "Julien Sergent",
+  "license": "ISC"
+}

@@ -1,0 +1,17 @@
+@import 'styles/conf';
+@import 'styles/fonts';
+@import 'styles/texts';
+@import 'styles/displays';
+@import 'styles/buttons';
+
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: #273238;
+    height: 100%;
+}
+
+app,
+home {
+    display: block;
+}
