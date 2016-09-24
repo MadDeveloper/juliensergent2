@@ -18,5 +18,21 @@
             align-items: center;
             justify-content: center;
         }
+
+        &.direction {
+            &.column {
+                flex-direction: column;
+            }
+        }
+    }
+}
+
+.float {
+    &.left {
+        float: left;
+    }
+
+    &.right {
+        float: right;
     }
 }

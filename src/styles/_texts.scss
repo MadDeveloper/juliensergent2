@@ -1,15 +1,3 @@
-h1 {
-    font-size: 36px;
-
-    &.main {
-        font-size: 70px;
-    }
-
-    &.title {
-        font-size: 36px;
-    }
-}
-
 h1,
 h2,
 h3,
@@ -19,5 +7,56 @@ h6,
 div,
 p,
 span {
-    color: #ecf0f1;
+    color: $main-color;
+}
+
+.color {
+    &.clouds {
+        color: $background-color;
+    }
+}
+
+.uppercased {
+    text-transform: uppercase;
+}
+
+h1.title {
+    font-size: $h1-title-font-size;
+}
+h1.subtitle {
+    font-size: $h1-subtitle-font-size;
+}
+
+h2.title {
+    font-size: $h2-title-font-size;
+}
+h2.subtitle {
+    font-size: $h2-subtitle-font-size;
+}
+
+h3.title {
+    font-size: $h3-title-font-size;
+}
+h3.subtitle {
+    font-size: $h3-subtitle-font-size;
+}
+
+p,
+span {
+    font-size: $default-font-size;
+}
+
+.content {
+    padding: 20px;
+}
+
+section {
+    .title {
+        display: flex;
+        align-items: center;
+
+        &:first-child {
+            margin-right: 20px;   
+        }
+    }
 }

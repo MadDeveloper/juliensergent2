@@ -1,0 +1,30 @@
+.badge {
+    display: inline-block;
+    border-radius: 500rem;
+    min-width: 20px;
+    min-height: 20px;
+    font-size: $default-font-size;
+    justify-content: center;
+    background-color: $main-color;
+    text-align: center;
+    color: $background-color;
+
+    &.inverted {
+        background-color: $background-color;
+        color: $main-color;
+    }
+
+    &.title {
+        &.h1 {
+            min-width: 60px;
+            min-height: 60px;
+            font-size: $h1-subtitle-font-size;
+        }
+
+        &.h2 {
+            min-width: 45px;
+            min-height: 45px;
+            font-size: $h2-subtitle-font-size;
+        }
+    }
+}

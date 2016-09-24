@@ -1,0 +1,43 @@
+.height {
+    &.h-max,
+    &.max {
+        height: 100%;
+    }
+
+    &.half,
+    &.h-half {
+        height: 50%;
+    }
+}
+
+.width {
+    &.w-max,
+    &.max {
+        width: 100%;
+    }
+
+    &.w-three-quarts,
+    &.three-quarts {
+        width: 75%;
+    }
+
+    &.w-two-thirds,
+    &.two-thirds {
+        width: 66.6666%;
+    }
+
+    &.half,
+    &.w-half {
+        width: 50%;
+    }
+
+    &.a-third,
+    &.w-a-third {
+        width: 33.3333%;
+    }
+
+    &.a-quarter,
+    &.w-a-quarter {
+        width: 25%;
+    }
+}

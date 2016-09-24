@@ -27,8 +27,7 @@ import { StorageService }   from './services/storage.service'
 /*
  * Global components
  */
-import { HeaderComponent }  from './components/header/header.component'
-import { FooterComponent }  from './components/footer/footer.component'
+import { NavComponent }  from './components/nav/nav.component'
 
 /*
  * App Components
@@ -54,8 +53,7 @@ import { KeysPipe } from './pipes/keys.pipe'
     ],
     declarations: [
         AppComponent,
-        HeaderComponent,
-        FooterComponent,
+        NavComponent,
         HomeComponent,
         KeysPipe
     ],

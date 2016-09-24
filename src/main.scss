@@ -2,12 +2,27 @@
 @import 'styles/fonts';
 @import 'styles/texts';
 @import 'styles/displays';
+@import 'styles/sizes';
+@import 'styles/images';
 @import 'styles/buttons';
+@import 'styles/badges';
+
+*,
+:after,
+:before {
+    box-sizing: border-box;
+}
 
 html, body {
     margin: 0;
     padding: 0;
-    background-color: #273238;
+    background-color: $background-color;
+    height: 100%;
+    color: $main-color;
+    overflow-x: hidden;
+}
+
+app {
     height: 100%;
 }
 

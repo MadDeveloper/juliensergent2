@@ -2,8 +2,18 @@
 
 header {}
 
-main {
+main,
+nav {
     display: block;
+}
+
+nav {
+    position: relative;
+    min-height: 1px;
+}
+
+main {
+    float: left;
 }
 
 footer {}
