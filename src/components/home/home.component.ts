@@ -57,32 +57,59 @@ export class HomeComponent implements OnInit {
     manageNavbarBehaviour() {
         $( document ).ready( () => {
             const $navbar   = $( '#nav-container' )
+            const $navroot  = $( '#nav-root' )
             const $app      = $( 'app' )
+            const $window   = $( window )
 
-            $app.scroll( () => {
-                const $window = $( window )
+            $app.scroll( () => handlerManagerNavbarBehaviour.call( this, $navroot, $navbar, $app, $window ) )
+
+            $window.resize( () => {
+                if ( $window.width() <= this.maxWidthSmallScreen && !this.navbarFixed ) {
+                    $navroot.css({
+                        height: '1px'
+                    })
+                    $navbar.css({
+                        width: '100%',
+                        position: 'relative',
+                        top: '100%'
+                    })
+
+                    this.navbarFixed = true
+                } else {
+                    handlerManagerNavbarBehaviour.call( this, $navroot, $navbar, $app, $window )
+                }
+            })
+
+            function handlerManagerNavbarBehaviour( $navroot, $navbar, $app, $window ) {
                 const scrollTop = $app.scrollTop()
                 const heightToStop = $window.height()
 
                 if ( $window.width() > this.maxWidthSmallScreen ) {
-                    console.log( $window.width() )
                     if ( scrollTop <= heightToStop && !this.navbarFixed ) {
+                        $navroot.css({
+                            height: '100%'
+                        })
                         $navbar.css({
                             width: '100%',
                             position: 'relative',
-                            top: '100%'
+                            top: '0'
                         })
+
                         this.navbarFixed = true
                     } else if ( scrollTop >= heightToStop && this.navbarFixed ) {
+                        $navroot.css({
+                            height: '1px'
+                        })
                         $navbar.css({
                             width: '25%',
                             position: 'fixed',
                             top: '0'
                         })
+
                         this.navbarFixed = false
                     }
                 }
-            })
+            }
         })
     }
 }

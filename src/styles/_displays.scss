@@ -66,3 +66,17 @@
 .clear.both {
     clear: both;
 }
+
+.position {
+    &.relative {
+        position: relative;
+    }
+
+    @media screen and(max-width: $max-width-small-screen) {
+        &.migration {
+            &.to-relative {
+                position: relative;
+            }
+        }
+    }
+}
