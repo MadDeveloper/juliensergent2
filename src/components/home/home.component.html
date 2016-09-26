@@ -1,16 +1,16 @@
 <!-- First page -->
 <section id="first-page" class="display flex direction column all centered height max width max">
-    <img class="image profile" src="/public/assets/images/julien-sergent.jpg" alt="">
+    <img class="image profile rounded" src="/public/assets/images/julien-sergent.jpg" alt="">
     <h1 class="title" id="main-title">Julien Sergent</h1>
     <h1 class="title color clouds" id="main-subtitle">Web Developer</h1>
     <button (click)="gotoProfile()" class="button inverted">Watch profile</button>
 </section>
 
 <!-- navbar -->
-<nav class="display block float left width w-a-quarter navbar-left">
-    <div id="nav-container" class="width a-quarter color clouds">
-        <div id="user-container" class="display flex all centered direction column content">
-            <img src="/public/assets/images/julien-sergent.jpg" alt="" class="image profile">
+<nav class="display block float left width w-a-quarter navbar-left migration w-to-max">
+    <div id="nav-container" class="width a-quarter color clouds migration w-to-max">
+        <div id="user-container" class="display flex all centered direction column content migration to-none">
+            <img src="/public/assets/images/julien-sergent.jpg" alt="" class="image profile rounded">
             <h2 id="profil-title" class="title bold">Julien Sergent</h2>
             <h3 class="subtitle">Web Developer</h3>
         </div>
@@ -19,7 +19,7 @@
             <section>
                 <div class="title">
                     <span class="badge title h3 margined right"><i class="fa fa-user"></i></span>
-                    <h3 class="subtitle">About me</h3>
+                    <h3 id="about-me-title" class="subtitle">About me</h3>
                 </div>
                 <p class="content horizontal small reduced-margin">
                     Je suis un développeur passioné depuis mon plus jeune âge, je consacre énormément de temps à mon travail et surtout à ma passion.
@@ -54,7 +54,7 @@
 </nav>
 
 <!-- main content -->
-<section id="main-section" class="display block float left height h-max width w-three-quarters content">
+<section id="main-section" class="display block float left height h-max width w-three-quarters content migration w-to-max">
     <section class="section-item">
         <div class="title">
             <span class="badge title h2 margined"><i class="fa fa-briefcase"></i></span>
@@ -84,6 +84,28 @@
                 Utilisation du langage PHP et Javascript.
             </p>
         </article>
+
+        <article>
+            <h2 class="title event">Wordpress developer</h2>
+            <p class="metadata">
+                <span class="location"><i class="fa fa-building"></i> 3WCOM</span><span class="date"><i class="fa fa-calendar"></i> 20 Septembre 2014 - 31 Octobre 2014</span>
+            </p>
+            <p class="event content">
+                Réalisation d’un site sous Wordpress pour un client.<br>
+                Développement de modules Wordpress spécifiques pour convénir aux besoins.
+            </p>
+        </article>
+
+        <article>
+            <h2 class="title event">PHP developer</h2>
+            <p class="metadata">
+                <span class="location"><i class="fa fa-building"></i> Devster</span><span class="date"><i class="fa fa-calendar"></i> 01 Novembre 2013 - 20 Décembre 2013</span>
+            </p>
+            <p class="event content">
+                Conception et développement d’une plateforme web interne permettant de faciliter la gestion des candidatures.<br>
+                Réalisé avec le langage PHP, Javascript et la technologie Ajax.
+            </p>
+        </article>
     </section>
 
     <section class="section-item bgcolor clouds remove-main-section-padding">
@@ -93,36 +115,393 @@
         </div>
 
         <article>
-            <h2 class="title event">PHP developer</h2>
+            <h2 class="title event">Licence développement informatique</h2>
             <p class="metadata">
-                <span class="location"><i class="fa fa-building"></i> Twinpix</span><span class="date"><i class="fa fa-calendar"></i> 18 Juillet 2016 - 18 Octobre 2016</span>
+                <span class="location"><i class="fa fa-building"></i> Supinfo</span><span class="date"><i class="fa fa-calendar"></i> 2013 - 2016</span>
             </p>
             <p class="event content">
-                Développement d’une application Facebook responsive, permettant aux utilisateurs de pouvoir calculer leur corrélation psychologique
-                avec des amis suivant leurs réponses aux questions d’une quizz.<br>
-                Utilisation du langage Typescript, avec le framework Angular 2 et les librairies Facebook, Firebase, Hammerjs, Semantic-UI.
+                Obtention du titre BAC+3 Baschelor of Science en développement logiciels et réseaux informatique au sein de l’école
+                SUPINFO International University, à Toulouse.
+            </p>
+        </article>
+
+        <article>
+            <h2 class="title event">Baccalauréat scientifique</h2>
+            <p class="metadata">
+                <span class="location"><i class="fa fa-building"></i> Lycée Clément-Marot</span><span class="date"><i class="fa fa-calendar"></i> 2012 - 2013</span>
+            </p>
+            <p class="event content">
+                Obtention du baccalauréat scientifique avec mention au sein de l’établissement Clément Marot, à Cahors.
             </p>
         </article>
     </section>
 
-    <div>
+    <section class="section-item">
         <div class="title">
             <span class="badge title h2 margined"><i class="fa fa-code"></i></span>
             <h1 class="title">Skills</h1>
         </div>
-    </div>
 
-    <div class="bgcolor clouds remove-main-section-padding">
+        <article>
+            <div class="event content">
+                <ul class="float left width half list migration to-unfloat w-to-max to-block">
+                    <li>
+                        <span>Javascript</span>
+                        <span class="float right">
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                        </span>
+                    </li>
+                    <li>
+                        <span>Node.js</span>
+                        <span class="float right">
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                        </span>
+                    </li>
+                    <li>
+                        <span>PHP</span>
+                        <span class="float right">
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                        </span>
+                    </li>
+                    <li>
+                        <span>HTML</span>
+                        <span class="float right">
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                        </span>
+                    </li>
+                    <li>
+                        <span>CSS</span>
+                        <span class="float right">
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                        </span>
+                    </li>
+                    <li>
+                        <span>MySQL / MariaDB</span>
+                        <span class="float right">
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                        </span>
+                    </li>
+                    <li>
+                        <span>jQuery</span>
+                        <span class="float right">
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                        </span>
+                    </li>
+                    <li>
+                        <span>Typescript</span>
+                        <span class="float right">
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star-o"></span>
+                        </span>
+                    </li>
+                    <li>
+                        <span>Angular 2</span>
+                        <span class="float right">
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star-o"></span>
+                        </span>
+                    </li>
+                    <li>
+                        <span>Firebase</span>
+                        <span class="float right">
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star-o"></span>
+                        </span>
+                    </li>
+                </ul>
+                <ul class="float right width half list migration to-unfloat w-to-max to-block">
+                    <li>
+                        <span>Bootstrap</span>
+                        <span class="float right">
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star-o"></span>
+                        </span>
+                    </li>
+                    <li>
+                        <span>Semantic-UI</span>
+                        <span class="float right">
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star-o"></span>
+                        </span>
+                    </li>
+                    <li>
+                        <span>SQL</span>
+                        <span class="float right">
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star-o"></span>
+                        </span>
+                    </li>
+                    <li>
+                        <span>MongoDB</span>
+                        <span class="float right">
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star-o"></span>
+                        </span>
+                    </li>
+                    <li>
+                        <span>UML</span>
+                        <span class="float right">
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star-o"></span>
+                        </span>
+                    </li>
+                    <li>
+                        <span>SASS</span>
+                        <span class="float right">
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star-o"></span>
+                            <span class="fa fa-star-o"></span>
+                        </span>
+                    </li>
+                    <li>
+                        <span>Linux</span>
+                        <span class="float right">
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star-o"></span>
+                            <span class="fa fa-star-o"></span>
+                        </span>
+                    </li>
+                    <li>
+                        <span>Design Pattern</span>
+                        <span class="float right">
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star-o"></span>
+                            <span class="fa fa-star-o"></span>
+                        </span>
+                    </li>
+                    <li>
+                        <span>SEO</span>
+                        <span class="float right">
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star-o"></span>
+                            <span class="fa fa-star-o"></span>
+                        </span>
+                    </li>
+                    <li>
+                        <span>C / C++</span>
+                        <span class="float right">
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star-o"></span>
+                            <span class="fa fa-star-o"></span>
+                            <span class="fa fa-star-o"></span>
+                        </span>
+                    </li>
+                </ul>
+                <div class="clear both"></div>
+            </div>
+        </article>
+    </section>
+
+    <section class="section-item bgcolor clouds remove-main-section-padding">
         <div class="title">
             <span class="badge title h2 margined"><i class="fa fa-code-fork"></i></span>
             <h1 class="title">Tools</h1>
         </div>
-    </div>
 
-    <div>
+        <article>
+            <div class="event content">
+                <ul class="float left width half list inverted migration to-unfloat w-to-max to-block">
+                    <li>
+                        <span>NPM</span>
+                        <span class="float right">
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                        </span>
+                    </li>
+                    <li>
+                        <span>JSPM</span>
+                        <span class="float right">
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                        </span>
+                    </li>
+                    <li>
+                        <span>Bower</span>
+                        <span class="float right">
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                        </span>
+                    </li>
+                    <li>
+                        <span>Babel</span>
+                        <span class="float right">
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star-o"></span>
+                        </span>
+                    </li>
+                    <li>
+                        <span>Git</span>
+                        <span class="float right">
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star-o"></span>
+                        </span>
+                    </li>
+                </ul>
+                <ul class="float right width half list inverted migration to-unfloat w-to-max to-block">
+                    <li>
+                        <span>Gulp</span>
+                        <span class="float right">
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star-o"></span>
+                        </span>
+                    </li>
+                    <li>
+                        <span>Apache</span>
+                        <span class="float right">
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star-o"></span>
+                        </span>
+                    </li>
+                    <li>
+                        <span>Atom</span>
+                        <span class="float right">
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star-o"></span>
+                        </span>
+                    </li>
+                    <li>
+                        <span>PHPStorm</span>
+                        <span class="float right">
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star-o"></span>
+                            <span class="fa fa-star-o"></span>
+                        </span>
+                    </li>
+                    <li>
+                        <span>Docker</span>
+                        <span class="float right">
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star-o"></span>
+                            <span class="fa fa-star-o"></span>
+                            <span class="fa fa-star-o"></span>
+                        </span>
+                    </li>
+                </ul>
+                <div class="clear both"></div>
+            </div>
+        </article>
+    </section>
+
+    <section class="section-item">
         <div class="title">
             <span class="badge title h2 margined"><i class="fa fa-language"></i></span>
             <h1 class="title">Languages</h1>
         </div>
-    </div>
+
+        <article>
+            <ul class="list float left width half text-centered">
+                <li>
+                    <img src="/public/assets/images/fr.jpg" alt="french flag" class="image rounded medium">
+                    <span class="display block">
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                    </span>
+                </li>
+            </ul>
+            <ul class="list float left width half text-centered">
+                <li>
+                    <img src="/public/assets/images/en.jpg" alt="english flag" class="image rounded medium">
+                    <span class="display block">
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star-o"></span>
+                    </span>
+                </li>
+            </ul>
+            <div class="clear both"></div>
+        </article>
+    </section>
 </section>

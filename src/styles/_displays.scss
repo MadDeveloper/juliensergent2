@@ -33,6 +33,18 @@
             }
         }
     }
+
+    @media screen and(max-width: $max-width-small-screen) {
+        &.migration {
+            &.to-block {
+                display: block;
+            }
+
+            &.to-none {
+                display: none;
+            }
+        }
+    }
 }
 
 .float {
@@ -43,4 +55,14 @@
     &.right {
         float: right;
     }
+
+    @media screen and(max-width: $max-width-small-screen) {
+        &.migration.to-unfloat {
+            float: none;
+        }
+    }
+}
+
+.clear.both {
+    clear: both;
 }

@@ -1,0 +1,20 @@
+.list {
+    padding: 0;
+    margin: 0;
+    padding-right: 20px;
+    list-style-type: none;
+
+    li {
+        display: block;
+        padding: 3px 5px;
+
+        &:hover {
+            cursor: default;
+            background-color: $clouds-color;
+        }
+    }
+
+    &.inverted li:hover {
+        background-color: $background-color;
+    }
+}

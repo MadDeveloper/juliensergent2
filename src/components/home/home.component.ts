@@ -18,6 +18,9 @@ export class HomeComponent implements OnInit {
     langs: Lang[]
     langUsed: Lang
 
+    private navbarFixed: boolean = true
+    private maxWidthSmallScreen = 999
+
     constructor(
         private lang: LangService,
         private router: Router,
@@ -30,6 +33,7 @@ export class HomeComponent implements OnInit {
         this.langs = this.lang.availables()
         this.langUsed = this.lang.used()
         this.title.setTitle( '' )
+        this.manageNavbarBehaviour()
     }
 
     changeLang( lang: Lang ) {
@@ -46,7 +50,39 @@ export class HomeComponent implements OnInit {
 
     gotoProfile() {
         $( 'app' ).animate({
-            scrollTop: $('app').scrollTop() + $( '#main-section' ).offset().top
+            scrollTop: $('app').scrollTop() + $( '#nav-container' ).offset().top
+        })
+    }
+
+    manageNavbarBehaviour() {
+        $( document ).ready( () => {
+            const $navbar   = $( '#nav-container' )
+            const $app      = $( 'app' )
+
+            $app.scroll( () => {
+                const $window = $( window )
+                const scrollTop = $app.scrollTop()
+                const heightToStop = $window.height()
+
+                if ( $window.width() > this.maxWidthSmallScreen ) {
+                    console.log( $window.width() )
+                    if ( scrollTop <= heightToStop && !this.navbarFixed ) {
+                        $navbar.css({
+                            width: '100%',
+                            position: 'relative',
+                            top: '100%'
+                        })
+                        this.navbarFixed = true
+                    } else if ( scrollTop >= heightToStop && this.navbarFixed ) {
+                        $navbar.css({
+                            width: '25%',
+                            position: 'fixed',
+                            top: '0'
+                        })
+                        this.navbarFixed = false
+                    }
+                }
+            })
         })
     }
 }

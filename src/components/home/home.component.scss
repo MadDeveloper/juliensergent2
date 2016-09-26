@@ -31,10 +31,10 @@ nav.navbar-left {
 
     #nav-container {
         background-color: $light-main-color;
-        position: fixed;
-        top: 0;
+        position: relative;
+        top: 100%;
         z-index: 100;
-        width: 25%;
+        width: 100%;
         height: 100%;
         overflow-y: auto;
         overflow-x: hidden;
@@ -53,6 +53,10 @@ nav.navbar-left {
             & + .subtitle {
                 margin: 0;
             }
+        }
+
+        #about-me-title {
+            margin: 0;
         }
     }
 }

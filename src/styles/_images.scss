@@ -1,6 +1,9 @@
 .image {
-    &.profile {
+    &.rounded {
         border-radius: 50%;
+    }
+
+    &.profile {
         width: 150px;
         height: 150px;
     }
@@ -27,5 +30,10 @@
                 border: 5px solid $background-color;
             }
         }
+    }
+
+    &.medium {
+        width: 100px;
+        height: 100px;
     }
 }
