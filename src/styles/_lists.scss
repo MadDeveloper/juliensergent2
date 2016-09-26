@@ -4,6 +4,12 @@
     padding-right: 20px;
     list-style-type: none;
 
+    &.rounded {
+        li {
+            border-radius: 4px;
+        }
+    }
+
     li {
         display: block;
         padding: 3px 5px;

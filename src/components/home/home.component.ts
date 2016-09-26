@@ -65,14 +65,8 @@ export class HomeComponent implements OnInit {
 
             $window.resize( () => {
                 if ( $window.width() <= this.maxWidthSmallScreen && !this.navbarFixed ) {
-                    $navroot.css({
-                        height: '1px'
-                    })
-                    $navbar.css({
-                        width: '100%',
-                        position: 'relative',
-                        top: '100%'
-                    })
+                    $navroot.removeClass( 'height h-max' )
+                    $navbar.removeClass( 'fixed' )
 
                     this.navbarFixed = true
                 } else {
@@ -86,25 +80,13 @@ export class HomeComponent implements OnInit {
 
                 if ( $window.width() > this.maxWidthSmallScreen ) {
                     if ( scrollTop <= heightToStop && !this.navbarFixed ) {
-                        $navroot.css({
-                            height: '100%'
-                        })
-                        $navbar.css({
-                            width: '100%',
-                            position: 'relative',
-                            top: '0'
-                        })
+                        $navroot.addClass( 'height h-max' )
+                        $navbar.removeClass( 'fixed' )
 
                         this.navbarFixed = true
                     } else if ( scrollTop >= heightToStop && this.navbarFixed ) {
-                        $navroot.css({
-                            height: '1px'
-                        })
-                        $navbar.css({
-                            width: '25%',
-                            position: 'fixed',
-                            top: '0'
-                        })
+                        $navroot.removeClass( 'height h-max' )
+                        $navbar.addClass( 'fixed' )
 
                         this.navbarFixed = false
                     }
