@@ -1,15 +1,16 @@
 /*
  * Colors
  */
-$main-color: #36474f;
-$dark-main-color: #273238;
+$main-color: #273238;
+$light-main-color: #36474f;
 $background-color: white;
-// $background-color: #ecf0f1;
+$clouds-color: #ecf0f1;
+$light-grey-color: #aaabac;
 
 /*
  * Sizes
  */
-$default-font-size: 14px;
+$default-font-size: 13px;
 
 $h1-title-font-size: 30px;
 $h2-title-font-size: 23px;
@@ -20,3 +21,5 @@ $h1-subtitle-font-size: 26px;
 $h2-subtitle-font-size: 20px;
 $h3-subtitle-font-size: 17px;
 $h4-subtitle-font-size: 14px;
+
+$max-width-small-screen: 999px;

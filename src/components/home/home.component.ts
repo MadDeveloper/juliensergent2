@@ -43,4 +43,10 @@ export class HomeComponent implements OnInit {
     openLangModal( event: Event ) {
         event.preventDefault()
     }
+
+    gotoProfile() {
+        $( 'app' ).animate({
+            scrollTop: $('app').scrollTop() + $( '#main-section' ).offset().top
+        })
+    }
 }

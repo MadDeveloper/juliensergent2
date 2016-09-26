@@ -19,6 +19,14 @@
             justify-content: center;
         }
 
+        &.items-centered {
+            align-items: center;
+        }
+
+        &.justified {
+            align-items: center;
+        }
+
         &.direction {
             &.column {
                 flex-direction: column;

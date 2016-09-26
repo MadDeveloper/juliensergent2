@@ -25,11 +25,6 @@ import { TitleService }     from './services/title.service'
 import { StorageService }   from './services/storage.service'
 
 /*
- * Global components
- */
-import { NavComponent }  from './components/nav/nav.component'
-
-/*
  * App Components
  */
 import { HomeComponent } from './components/home/home.component'
@@ -53,7 +48,6 @@ import { KeysPipe } from './pipes/keys.pipe'
     ],
     declarations: [
         AppComponent,
-        NavComponent,
         HomeComponent,
         KeysPipe
     ],

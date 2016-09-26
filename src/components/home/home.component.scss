@@ -1,1 +1,69 @@
 @import '../../styles/conf';
+
+#first-page {
+    background-image: url('/public/assets/images/background.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    z-index: 200;
+
+    h1#main-title {
+        font-size: 50px;
+        color: $background-color;
+        font-weight: bold;
+        padding-bottom: 10px;
+        margin-bottom: 0;
+        border-bottom: 1px solid $light-main-color;
+    }
+
+    h1#main-subtitle {
+        font-size: 30px;
+        margin-top: 15px;
+        font-weight: 100;
+    }
+}
+
+nav.navbar-left {
+    position: relative;
+    min-height: 1px;
+    width: 25%;
+
+    #nav-container {
+        background-color: $light-main-color;
+        position: fixed;
+        top: 0;
+        z-index: 100;
+        width: 25%;
+        height: 100%;
+        overflow-y: auto;
+        overflow-x: hidden;
+
+        #user-container {
+            height: 300px;
+            background-color: $main-color;
+            margin-bottom: 0;
+        }
+
+        #profil-title {
+            border-bottom: 1px solid $light-main-color;
+            padding-bottom: 5px;
+            margin-bottom: 5px;
+
+            & + .subtitle {
+                margin: 0;
+            }
+        }
+    }
+}
+
+#main-section {
+    padding: 0 40px;
+}
+
+.remove-main-section-padding {
+    margin-left: -40px;
+    margin-right: -40px;
+    padding-left: 40px;
+    padding-right: 40px;
+}

@@ -19,14 +19,16 @@ html, body {
     background-color: $background-color;
     height: 100%;
     color: $main-color;
-    overflow-x: hidden;
+    // overflow-x: hidden;
+    line-height: 1.64;
 }
 
 app {
-    height: 100%;
+    overflow-y: auto;
 }
 
 app,
 home {
     display: block;
+    height: 100%;
 }

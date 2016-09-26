@@ -1,25 +1,51 @@
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-div,
-p,
-span {
-    color: $main-color;
-}
+/*
+ * Paragraphs
+ */
+p {
+    &.not-margined {
+        margin: 0;
+    }
 
-.color {
-    &.clouds {
-        color: $background-color;
+    &.reduced-margin {
+        margin: 5px 0;
     }
 }
 
+/*
+ * Links
+ */
+a {
+    text-decoration: none;
+}
+
+a.link {
+    &.default {
+        color: $main-color;
+    }
+
+    &.inverted {
+        color: $background-color;
+    }
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+/*
+ * Transforms
+ */
 .uppercased {
     text-transform: uppercase;
 }
 
+.bold {
+    font-weight: bold;
+}
+
+/*
+ * Headers
+ */
 h1.title {
     font-size: $h1-title-font-size;
 }
@@ -41,13 +67,40 @@ h3.subtitle {
     font-size: $h3-subtitle-font-size;
 }
 
+/*
+ * Font sizes
+ */
 p,
-span {
+span,
+a {
     font-size: $default-font-size;
 }
 
+/*
+ * Contents
+ */
 .content {
     padding: 20px;
+
+    &.horizontal {
+        padding: 0 20px;
+    }
+
+    &.vertical {
+        padding: 20px 0;
+    }
+
+    &.small {
+        padding: 5px;
+
+        &.horizontal {
+            padding: 0 7px;
+        }
+
+        &.vertical {
+            padding: 7px 0;
+        }
+    }
 }
 
 section {
@@ -55,8 +108,78 @@ section {
         display: flex;
         align-items: center;
 
-        &:first-child {
-            margin-right: 20px;   
+        &.margined {
+            margin-right: 20px;
         }
+    }
+
+    .section-item {
+        padding-top: 20px;
+    }
+
+    article {
+        display: block;
+        padding-bottom: 50px;
+
+        .title.event {
+            margin: 0;
+            padding-left: 68px;
+        }
+
+        .metadata {
+            margin-top: 0;
+            padding-left: 68px;
+
+            .location,
+            .date {
+                color: $light-grey-color;
+            }
+
+            .location {
+                margin-right: 30px;
+            }
+        }
+
+        .event.content {
+            padding: 0;
+            padding-left: 68px;
+        }
+    }
+}
+
+/*
+ * Colors
+ */
+.color {
+    &.clouds {
+        color: $background-color;
+    }
+
+    &.default {
+        color: $main-color;
+    }
+}
+
+.bgcolor {
+    &.clouds {
+        background-color: $clouds-color;
+    }
+
+    &.default {
+        background-color: $main-color;
+
+        &.light {
+            background-color: $light-main-color;
+        }
+    }
+}
+
+/*
+ * Margins
+ */
+.margin {
+    &.no-vertical {
+        margin-top: 0;
+        margin-bottom: 0;
     }
 }
