@@ -8,19 +8,35 @@
     position: relative;
     z-index: 200;
 
+    img {
+        @media screen and(max-width: $max-width-small-screen) {
+            width: 100px;
+            height: 100px;
+        }
+    }
+
     h1#main-title {
         font-size: 50px;
         color: $background-color;
         font-weight: bold;
         padding-bottom: 10px;
         margin-bottom: 0;
-        border-bottom: 1px solid $light-main-color;
+        border-bottom: 1px solid rgba( 255, 255, 255, .1 );
+
+        @media screen and(max-width: $max-width-small-screen) {
+            font-size: 30px;
+            padding-bottom: 15px;
+        }
     }
 
     h1#main-subtitle {
         font-size: 30px;
         margin-top: 15px;
         font-weight: 100;
+
+        @media screen and(max-width: $max-width-small-screen) {
+            font-size: 20px;
+        }
     }
 }
 
