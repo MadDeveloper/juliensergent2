@@ -34,6 +34,12 @@ export class HomeComponent implements OnInit {
         this.langUsed = this.lang.used()
         this.title.setTitle( '' )
         this.manageNavbarBehaviour()
+
+        $( 'app' ).scroll( () => {
+            $('#first-page').css({
+                transform: `translate(0px, ${$( 'app' ).scrollTop()}px)`
+            })
+        })
     }
 
     changeLang( lang: Lang, event: Event ) {
@@ -44,6 +50,7 @@ export class HomeComponent implements OnInit {
 
         $( '.lang.modal .content' ).removeClass( 'displayed' )
         $( 'app' ).off( '.lang' )
+        this.toggleFirstPageBlur()
     }
 
     toggleLangModal( event: Event ) {
@@ -72,12 +79,22 @@ export class HomeComponent implements OnInit {
                 left: $modalContent.width() / 2 - 8.5
             })
 
+            /*
+             * Blur first page
+             */
+            this.toggleFirstPageBlur()
+
+            /*
+             * Handle click not on a lang
+             */
             $( 'app' ).off( '.lang' ).on( 'click.lang', () => {
                 $( '.lang.modal .content' ).removeClass( 'displayed' )
                 $( 'app' ).off( '.lang' )
+                this.toggleFirstPageBlur()
             })
         } else {
             $( 'app' ).off( '.lang' )
+            this.toggleFirstPageBlur()
         }
     }
 
@@ -126,5 +143,13 @@ export class HomeComponent implements OnInit {
                 }
             }
         })
+    }
+
+    private toggleFirstPageBlur() {
+        if ( $( '.lang.modal .content' ).hasClass( 'displayed' ) ) {
+            $( '#first-page > *:not(#lang-container)' ).addClass( 'blurred' )
+        } else {
+            $( '#first-page > *:not(#lang-container)' ).removeClass( 'blurred' )
+        }
     }
 }

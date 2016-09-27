@@ -25,6 +25,12 @@
         }
     }
 
+    &.large {
+        li {
+            padding: 5px 20px;
+        }
+    }
+
     &.inverted li:hover {
         background-color: $background-color;
     }
