@@ -36,16 +36,49 @@ export class HomeComponent implements OnInit {
         this.manageNavbarBehaviour()
     }
 
-    changeLang( lang: Lang ) {
-        this.langUsed = this.lang.use( lang );
+    changeLang( lang: Lang, event: Event ) {
+        event.stopPropagation()
 
-        (<any>$)( '.ui.modal' ).modal( 'hide' )
-
+        this.langUsed = this.lang.use( lang )
         this.translate.use( this.langUsed.tag )
+
+        $( '.lang.modal .content' ).removeClass( 'displayed' )
+        $( 'app' ).off( '.lang' )
     }
 
-    openLangModal( event: Event ) {
+    toggleLangModal( event: Event ) {
         event.preventDefault()
+        event.stopPropagation()
+
+        const $modal        = $( '.lang.modal' )
+        const $modalContent = $modal.children( '.content' )
+        const $caret        = $modalContent.children( '.caret' )
+
+        $modalContent.toggleClass( 'displayed' )
+
+        if ( $modalContent.hasClass( 'displayed' ) ) {
+            /*
+             * Center modal in container
+             */
+            $modalContent.css({
+                left: -Math.abs( $modal.width() - $modalContent.width() ) / 2,
+                top: $modal.height() + 10
+            })
+
+            /*
+             * Center caret in modal content
+             */
+            $caret.css({
+                left: $modalContent.width() / 2 - 8.5
+            })
+
+            $( 'app' ).off( '.lang' ).on( 'click.lang', () => {
+                $( '.lang.modal .content' ).removeClass( 'displayed' )
+                $( 'app' ).off( '.lang' )
+            })
+        } else {
+            $( 'app' ).off( '.lang' )
+        }
     }
 
     gotoProfile() {

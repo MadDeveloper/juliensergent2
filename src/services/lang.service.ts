@@ -37,9 +37,8 @@ export class LangService {
 
     availables(): Lang[] {
         return [
-            {  name: 'Français', tag: 'fr' },
-            {  name: 'English', tag: 'en' },
-            {  name: 'Español', tag: 'es' }
+            {  name: 'Français', tag: 'fr', flag: '/public/assets/images/fr.jpg' },
+            {  name: 'English', tag: 'en', flag: '/public/assets/images/en.jpg' }
         ]
     }
 

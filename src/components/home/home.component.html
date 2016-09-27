@@ -1,6 +1,20 @@
 <!-- First page -->
 <section id="first-page" class="display flex direction column all centered height max width max">
-    <img class="image profile rounded" src="/public/assets/images/julien-sergent.jpg" alt="">
+    <div id="lang-container" class="display flex justified width max position absolute origin">
+        <div class="lang modal">
+            <a (click)="toggleLangModal( $event )" class="link inverted">{{ langUsed.name }} <i class="fa fa-angle-down"></i></a>
+            <div class="default content">
+                <i class="fa fa-caret-up caret" aria-hidden="true"></i>
+                <ul class="list modal">
+                    <li *ngFor="let lang of langs" (click)="changeLang( lang.tag, $event )" class="clickable">
+                        <span>{{ lang.name }}</span>
+                        <img class="float right image rounded in-list" src="{{ lang.flag }}" alt="">
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <img id="main-image" class="image profile rounded" src="/public/assets/images/julien-sergent.jpg" alt="">
     <h1 class="title" id="main-title">Julien Sergent</h1>
     <h1 class="title color clouds" id="main-subtitle">Web Developer</h1>
     <button (click)="gotoProfile()" class="button inverted">Watch profile</button>

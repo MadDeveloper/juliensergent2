@@ -29,6 +29,7 @@ a.link {
 
     &:hover {
         text-decoration: underline;
+        cursor: pointer;
     }
 }
 
@@ -45,6 +46,10 @@ a.link {
 
 .text-centered {
     text-align: center;
+}
+
+.clickable:hover {
+    cursor: pointer !important;
 }
 
 /*

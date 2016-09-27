@@ -23,8 +23,12 @@
             align-items: center;
         }
 
+        &.items-start {
+            align-items: flex-start;
+        }
+
         &.justified {
-            align-items: center;
+            justify-content: center;
         }
 
         &.direction {
@@ -70,6 +74,15 @@
 .position {
     &.relative {
         position: relative;
+    }
+
+    &.absolute {
+        position: absolute;
+    }
+
+    &.origin {
+        top: 0;
+        left: 0;
     }
 
     @media screen and(max-width: $max-width-small-screen) {

@@ -1,0 +1,32 @@
+.modal {
+    position: relative;
+
+    & > .content {
+        display: none;
+        position: absolute;
+        min-width: 180px;
+        // overflow-x: hidden;
+        top: 100%;
+        left: 0;
+        border-radius: 10px;
+        padding: 0;
+
+        &.default {
+            background-color: $background-color;
+            box-shadow: 0 0 70px rgba( 0, 0, 0, .8 );
+            color: $main-color;
+        }
+
+        &.displayed {
+            display: block;
+        }
+
+        .caret {
+            position: absolute;
+            left: 0;
+            top: -20px;
+            color: $background-color;
+            font-size: 30px;
+        }
+    }
+}
