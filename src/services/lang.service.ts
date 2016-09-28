@@ -51,6 +51,6 @@ export class LangService {
             }
         })
 
-        return lang.length > 0 ? lang[ 0 ] : { name: 'Français', tag: 'fr' }
+        return lang.length > 0 ? lang[ 0 ] : { name: 'Français', tag: 'fr', flag: '/public/assets/images/fr.jpg' }
     }
 }

@@ -32,13 +32,20 @@ export class HomeComponent implements OnInit {
     ngOnInit() {
         this.langs = this.lang.availables()
         this.langUsed = this.lang.used()
-        this.title.setTitle( '' )
-        this.manageNavbarBehaviour()
 
-        $( 'app' ).scroll( () => {
-            $('#first-page').css({
-                transform: `translate(0px, ${$( 'app' ).scrollTop()}px)`
+        const $document = $( document )
+
+        $document.ready( () => {
+            $document.scroll( () => {
+                $( '#first-page' ).css({
+                    transform: `translate(0px, ${$document.scrollTop()}px)`
+                })
             })
+
+            /*
+             * Easter Egg card profile first page
+             */
+            $( '#image-profile-container' ).on( 'click', () => $( '#card-image-profile' ).toggleClass( 'flipped' ) )
         })
     }
 
@@ -57,6 +64,7 @@ export class HomeComponent implements OnInit {
         event.preventDefault()
         event.stopPropagation()
 
+        const $app          = $( 'app' )
         const $modal        = $( '.lang.modal' )
         const $modalContent = $modal.children( '.content' )
         const $caret        = $modalContent.children( '.caret' )
@@ -87,69 +95,45 @@ export class HomeComponent implements OnInit {
             /*
              * Handle click not on a lang
              */
-            $( 'app' ).off( '.lang' ).on( 'click.lang', () => {
-                $( '.lang.modal .content' ).removeClass( 'displayed' )
-                $( 'app' ).off( '.lang' )
+            $app.off( '.lang' ).on( 'click.lang', () => {
+                $modalContent.removeClass( 'displayed' )
+                $app.off( '.lang' )
                 this.toggleFirstPageBlur()
             })
         } else {
-            $( 'app' ).off( '.lang' )
+            $app.off( '.lang' )
             this.toggleFirstPageBlur()
         }
     }
 
     gotoProfile() {
-        $( 'app' ).animate({
-            scrollTop: $('app').scrollTop() + $( '#nav-container' ).offset().top
-        })
-    }
+        const top       = $( window ).width() <= this.maxWidthSmallScreen ? $( '#nav-root' ).offset().top : $( '#main-section' ).offset().top
+        const duration  = 400
 
-    manageNavbarBehaviour() {
-        $( document ).ready( () => {
-            const $navbar   = $( '#nav-container' )
-            const $navroot  = $( '#nav-root' )
-            const $app      = $( 'app' )
-            const $window   = $( window )
-
-            $app.scroll( () => handlerManagerNavbarBehaviour.call( this, $navroot, $navbar, $app, $window ) )
-
-            $window.resize( () => {
-                if ( $window.width() <= this.maxWidthSmallScreen && !this.navbarFixed ) {
-                    $navroot.removeClass( 'height h-max' )
-                    $navbar.removeClass( 'fixed' )
-
-                    this.navbarFixed = true
-                } else {
-                    handlerManagerNavbarBehaviour.call( this, $navroot, $navbar, $app, $window )
-                }
-            })
-
-            function handlerManagerNavbarBehaviour( $navroot, $navbar, $app, $window ) {
-                const scrollTop = $app.scrollTop()
-                const heightToStop = $window.height()
-
-                if ( $window.width() > this.maxWidthSmallScreen ) {
-                    if ( scrollTop <= heightToStop && !this.navbarFixed ) {
-                        $navroot.addClass( 'height h-max' )
-                        $navbar.removeClass( 'fixed' )
-
-                        this.navbarFixed = true
-                    } else if ( scrollTop >= heightToStop && this.navbarFixed ) {
-                        $navroot.removeClass( 'height h-max' )
-                        $navbar.addClass( 'fixed' )
-
-                        this.navbarFixed = false
-                    }
-                }
-            }
-        })
+        this.animateScrollTop( top, duration )
     }
 
     private toggleFirstPageBlur() {
         if ( $( '.lang.modal .content' ).hasClass( 'displayed' ) ) {
-            $( '#first-page > *:not(#lang-container)' ).addClass( 'blurred' )
+            $( '#first-page > *:not(#lang-container)' ).addClass( 'blurred accentuated' )
         } else {
-            $( '#first-page > *:not(#lang-container)' ).removeClass( 'blurred' )
+            $( '#first-page > *:not(#lang-container)' ).removeClass( 'blurred accentuated' )
+        }
+    }
+
+    private animateScrollTop( target, duration?: number ) {
+        const $window = $( window )
+        const scrollTopProxy = { value: $window.scrollTop() }
+        duration = duration || 16
+
+        if ( scrollTopProxy.value != target ) {
+            $( scrollTopProxy ).animate(
+                { value: target },
+                { duration, step: stepValue => {
+                    const rounded = Math.round( stepValue )
+                    $window.scrollTop( rounded )
+                }
+            })
         }
     }
 }

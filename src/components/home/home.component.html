@@ -15,10 +15,15 @@
                 </div>
             </div>
         </div>
-        <img id="main-image" class="image profile rounded" src="/public/assets/images/julien-sergent.jpg" alt="">
+        <section id="image-profile-container">
+            <div id="card-image-profile">
+                <figure class="front"><img alt="" class="image profile rounded main-image" src="/public/assets/images/julien-sergent.jpg"></figure>
+                <figure class="back"><img alt="" class="image profile rounded main-image" src="/public/assets/images/js.jpg"></figure>
+            </div>
+        </section>
         <h1 class="title" id="main-title">Julien Sergent</h1>
-        <h1 class="title color clouds" id="main-subtitle">Web Developer</h1>
-        <button (click)="gotoProfile()" class="button inverted">See resume</button>
+        <h1 class="title color clouds" id="main-subtitle">{{ 'profile.webDeveloper' | translate }}</h1>
+        <button (click)="gotoProfile()" class="button inverted">{{ 'firstPage.showResume' | translate }}</button>
     </section>
 </section>
 
@@ -28,20 +33,16 @@
         <div id="user-container" class="display flex all centered direction column content migration to-none">
             <img src="/public/assets/images/julien-sergent.jpg" alt="" class="image profile rounded">
             <h2 id="profil-title" class="title bold">Julien Sergent</h2>
-            <h3 class="subtitle">Web Developer</h3>
+            <h3 class="subtitle">{{ 'profile.webDeveloper' | translate }}</h3>
         </div>
 
         <div class="content">
             <section>
                 <div class="title">
                     <span class="badge title h3 margined right"><i class="fa fa-user"></i></span>
-                    <h3 id="about-me-title" class="subtitle">About me</h3>
+                    <h3 id="about-me-title" class="subtitle">{{ 'about.title' | translate }}</h3>
                 </div>
-                <p class="content horizontal small reduced-margin">
-                    Je suis un développeur passioné depuis mon plus jeune âge, je consacre énormément de temps à mon travail et surtout à ma passion.
-                    Je suis aussi un adepte du beau design, j'accord donc autant d'importance aux interfaces qu'au code.
-                    J'aime aussi travailler en équipe, cela permet de pouvoir partager nos connaissances et apprendre à collaborer.
-                </p>
+                <p class="content horizontal small reduced-margin">{{ 'about.text' | translate }}</p>
                 <div class="display flex items-centered content horizontal small">
                     <span class="badge inverted light margined right"><i class="fa fa-github"></i></span>
                     <p><a class="link inverted" href="https://github.com/MadDeveloper" target="_blank">MadDeveloper</a></p>
@@ -50,7 +51,7 @@
             <section>
                 <div class="title">
                     <span class="badge title h3 margined right"><i class="fa fa-envelope"></i></span>
-                    <h3 class="subtitle">Contact</h3>
+                    <h3 class="subtitle">{{ 'contact.title' | translate }}</h3>
                 </div>
                 <div class="display flex items-centered content horizontal small">
                     <span class="badge inverted light margined right"><i class="fa fa-map-marker"></i></span>
@@ -74,52 +75,50 @@
     <section class="section-item">
         <div class="title">
             <span class="badge title h2 margined"><i class="fa fa-briefcase"></i></span>
-            <h1 class="title">Work experiences</h1>
+            <h1 class="title">{{ 'workExperiences.title' | translate }}</h1>
         </div>
 
         <article>
-            <h2 class="title event">Angular 2 developer</h2>
+            <h2 class="title event">{{ 'workExperiences.angular2Developer.title' | translate }}</h2>
             <p class="metadata">
                 <span class="location"><i class="fa fa-building"></i> Twinipix</span><span class="date"><i class="fa fa-calendar"></i> 18 Juillet 2016 - 18 Octobre 2016</span>
             </p>
             <p class="event content">
-                Développement d’une application Facebook responsive, permettant aux utilisateurs de pouvoir calculer leur corrélation psychologique
-                avec des amis suivant leurs réponses aux questions d’une quizz.<br>
-                Utilisation du langage Typescript, avec le framework Angular 2 et les librairies Facebook, Firebase, Hammerjs, Semantic-UI.
+                {{ 'workExperiences.angular2Developer.textPart1' | translate }}<br>
+                {{ 'workExperiences.angular2Developer.textPart2' | translate }}
             </p>
         </article>
 
         <article>
-            <h2 class="title event">PHP developer</h2>
+            <h2 class="title event">{{ 'workExperiences.phpDeveloper1.title' | translate }}</h2>
             <p class="metadata">
                 <span class="location"><i class="fa fa-building"></i> Prep'App</span><span class="date"><i class="fa fa-calendar"></i> 01 Novembre 2014 - 28 Juin 2016</span>
             </p>
             <p class="event content">
-                Création d’une startup ayant pour projet la réalisation d’une plateforme web et mobile permettant une gestion plus
-                moderne des cours et révisions.<br>
-                Utilisation du langage PHP et Javascript.
+                {{ 'workExperiences.phpDeveloper1.textPart1' | translate }}<br>
+                {{ 'workExperiences.phpDeveloper1.textPart2' | translate }}
             </p>
         </article>
 
         <article>
-            <h2 class="title event">Wordpress developer</h2>
+            <h2 class="title event">{{ 'workExperiences.wordpressDeveloper.title' | translate }}</h2>
             <p class="metadata">
                 <span class="location"><i class="fa fa-building"></i> 3WCOM</span><span class="date"><i class="fa fa-calendar"></i> 20 Septembre 2014 - 31 Octobre 2014</span>
             </p>
             <p class="event content">
-                Réalisation d’un site sous Wordpress pour un client.<br>
-                Développement de modules Wordpress spécifiques pour convénir aux besoins.
+                {{ 'workExperiences.wordpressDeveloper.textPart1' | translate }}<br>
+                {{ 'workExperiences.wordpressDeveloper.textPart2' | translate }}
             </p>
         </article>
 
         <article>
-            <h2 class="title event">PHP developer</h2>
+            <h2 class="title event">{{ 'workExperiences.phpDeveloper2.title' | translate }}</h2>
             <p class="metadata">
                 <span class="location"><i class="fa fa-building"></i> Devster</span><span class="date"><i class="fa fa-calendar"></i> 01 Novembre 2013 - 20 Décembre 2013</span>
             </p>
             <p class="event content">
-                Conception et développement d’une plateforme web interne permettant de faciliter la gestion des candidatures.<br>
-                Réalisé avec le langage PHP, Javascript et la technologie Ajax.
+                {{ 'workExperiences.phpDeveloper2.textPart1' | translate }}<br>
+                {{ 'workExperiences.phpDeveloper2.textPart2' | translate }}
             </p>
         </article>
     </section>
@@ -127,35 +126,30 @@
     <section class="section-item bgcolor clouds remove-main-section-padding">
         <div class="title">
             <span class="badge title h2 margined"><i class="fa fa-graduation-cap"></i></span>
-            <h1 class="title">Education</h1>
+            <h1 class="title">{{ 'educations.title' | translate }}</h1>
         </div>
 
         <article>
-            <h2 class="title event">Licence développement informatique</h2>
+            <h2 class="title event">{{ 'educations.licence.title' | translate }}</h2>
             <p class="metadata">
                 <span class="location"><i class="fa fa-building"></i> Supinfo</span><span class="date"><i class="fa fa-calendar"></i> 2013 - 2016</span>
             </p>
-            <p class="event content">
-                Obtention du titre BAC+3 Baschelor of Science en développement logiciels et réseaux informatique au sein de l’école
-                SUPINFO International University, à Toulouse.
-            </p>
+            <p class="event content">{{ 'educations.licence.text' | translate }}</p>
         </article>
 
         <article>
-            <h2 class="title event">Baccalauréat scientifique</h2>
+            <h2 class="title event">{{ 'educations.bac.title' | translate }}</h2>
             <p class="metadata">
                 <span class="location"><i class="fa fa-building"></i> Lycée Clément-Marot</span><span class="date"><i class="fa fa-calendar"></i> 2012 - 2013</span>
             </p>
-            <p class="event content">
-                Obtention du baccalauréat scientifique avec mention au sein de l’établissement Clément Marot, à Cahors.
-            </p>
+            <p class="event content">{{ 'educations.bac.text' | translate }}</p>
         </article>
     </section>
 
     <section class="section-item">
         <div class="title">
             <span class="badge title h2 margined"><i class="fa fa-code"></i></span>
-            <h1 class="title">Skills</h1>
+            <h1 class="title">{{ 'skills.title' | translate }}</h1>
         </div>
 
         <article>
@@ -372,7 +366,7 @@
     <section class="section-item bgcolor clouds remove-main-section-padding">
         <div class="title">
             <span class="badge title h2 margined"><i class="fa fa-code-fork"></i></span>
-            <h1 class="title">Tools</h1>
+            <h1 class="title">{{ 'tools.title' | translate }}</h1>
         </div>
 
         <article>
@@ -489,7 +483,7 @@
     <section class="section-item">
         <div class="title">
             <span class="badge title h2 margined"><i class="fa fa-language"></i></span>
-            <h1 class="title">Languages</h1>
+            <h1 class="title">{{ 'languages.title' | translate }}</h1>
         </div>
 
         <article>

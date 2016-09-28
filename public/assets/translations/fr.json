@@ -1,1 +1,58 @@
-{}
+{
+    "profile": {
+        "webDeveloper": "Développeur Web"
+    },
+    "firstPage": {
+        "showResume": "Lire le CV"
+    },
+    "about": {
+        "title": "À propos",
+        "text": "Je suis un développeur passioné depuis mon plus jeune âge, je consacre énormément de temps à mon travail et surtout à ma passion. Je suis aussi un adepte du beau design, j'accord donc autant d'importance aux interfaces qu'au code. J'aime aussi travailler en équipe, cela permet de pouvoir partager nos connaissances et apprendre à collaborer."
+    },
+    "contact": {
+        "title": "Contact"
+    },
+    "workExperiences": {
+        "title": "Expériences professionnelles",
+        "angular2Developer": {
+            "title": "Développeur Angular 2",
+            "textPart1": "Développement d’une application Facebook responsive, permettant aux utilisateurs de pouvoir calculer leur corrélation psychologique avec des amis suivant leurs réponses aux questions d’une quizz.",
+            "textPart2": "Utilisation du langage Typescript, avec le framework Angular 2 et les librairies Facebook, Firebase, Hammerjs, Semantic-UI."
+        },
+        "phpDeveloper1": {
+            "title": "Développeur PHP",
+            "textPart1": "Création d’une startup ayant pour projet la réalisation d’une plateforme web et mobile permettant une gestion plus moderne des cours et révisions.",
+            "textPart2": "Utilisation du langage PHP et Javascript."
+        },
+        "wordpressDeveloper": {
+            "title": "Développeur Wordpress",
+            "textPart1": "Réalisation d’un site sous Wordpress pour un client.",
+            "textPart2": "Développement de modules Wordpress spécifiques pour convénir aux besoins."
+        },
+        "phpDeveloper2": {
+            "title": "Développeur PHP",
+            "textPart1": "Conception et développement d’une plateforme web interne permettant de faciliter la gestion des candidatures.",
+            "textPart2": "Réalisé avec le langage PHP, Javascript et la technologie Ajax."
+        }
+    },
+    "educations": {
+        "title": "Études",
+        "licence": {
+            "title": "Licence développement informatique",
+            "text": "Obtention du titre BAC+3 Baschelor of Science en développement logiciels et réseaux informatique au sein de l’école SUPINFO International University, à Toulouse."
+        },
+        "bac": {
+            "title": "Baccalauréat scientifique",
+            "text": "Obtention du baccalauréat scientifique avec mention au sein de l’établissement Clément Marot, à Cahors."
+        }
+    },
+    "skills": {
+        "title": "Compétences"
+    },
+    "tools": {
+        "title": "Outils"
+    },
+    "languages": {
+        "title": "Langues"
+    }
+}
