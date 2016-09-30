@@ -20,6 +20,7 @@ export class HomeComponent implements OnInit {
 
     private navbarFixed: boolean = true
     private maxWidthSmallScreen = 999
+    private langModalOpened = false
 
     constructor(
         private lang: LangService,
@@ -107,17 +108,21 @@ export class HomeComponent implements OnInit {
     }
 
     gotoProfile() {
-        const top       = $( window ).width() <= this.maxWidthSmallScreen ? $( '#nav-root' ).offset().top : $( '#main-section' ).offset().top
-        const duration  = 400
+        if ( !this.langModalOpened ) {
+            const top       = $( window ).width() <= this.maxWidthSmallScreen ? $( '#nav-root' ).offset().top : $( '#main-section' ).offset().top
+            const duration  = 400
 
-        this.animateScrollTop( top, duration )
+            this.animateScrollTop( top, duration )
+        }
     }
 
     private toggleFirstPageBlur() {
         if ( $( '.lang.modal .content' ).hasClass( 'displayed' ) ) {
             $( '#first-page > *:not(#lang-container)' ).addClass( 'blurred accentuated' )
+            this.langModalOpened = true
         } else {
             $( '#first-page > *:not(#lang-container)' ).removeClass( 'blurred accentuated' )
+            this.langModalOpened = false
         }
     }
 

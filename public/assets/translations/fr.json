@@ -7,7 +7,7 @@
     },
     "about": {
         "title": "À propos",
-        "text": "Je suis un développeur passioné depuis mon plus jeune âge, je consacre énormément de temps à mon travail et surtout à ma passion. Je suis aussi un adepte du beau design, j'accord donc autant d'importance aux interfaces qu'au code. J'aime aussi travailler en équipe, cela permet de pouvoir partager nos connaissances et apprendre à collaborer."
+        "text": "Je suis un développeur passionné depuis mon plus jeune âge, je consacre énormément de temps à mon travail et surtout à ma passion. Je suis aussi un adepte du beau design, j'accorde donc autant d'importance aux interfaces qu'au code. J'aime aussi travailler en équipe, cela permet de pouvoir partager nos connaissances et apprendre à collaborer."
     },
     "contact": {
         "title": "Contact"
@@ -27,7 +27,7 @@
         "wordpressDeveloper": {
             "title": "Développeur Wordpress",
             "textPart1": "Réalisation d’un site sous Wordpress pour un client.",
-            "textPart2": "Développement de modules Wordpress spécifiques pour convénir aux besoins."
+            "textPart2": "Développement de modules Wordpress spécifiques pour convenir aux besoins."
         },
         "phpDeveloper2": {
             "title": "Développeur PHP",

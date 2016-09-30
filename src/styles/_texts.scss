@@ -76,6 +76,10 @@ h3.subtitle {
     font-size: $h3-subtitle-font-size;
 }
 
+.title:hover {
+    cursor: default;
+}
+
 /*
  * Font sizes
  */
@@ -128,16 +132,28 @@ section {
 
     article {
         display: block;
-        padding-bottom: 50px;
+        padding: 0 0 50px 68px;
 
-        .title.event {
-            margin: 0;
-            padding-left: 68px;
+        @media screen and(max-width: $max-width-small-screen) {
+            padding-left: 0;
+        }
+
+        &.default {
+            padding-left: 0;
+        }
+
+        .event {
+            &.title {
+                margin: 0;
+                }
+
+            &.content {
+                padding: 0;
+            }
         }
 
         .metadata {
             margin-top: 0;
-            padding-left: 68px;
 
             .location,
             .date {
@@ -147,11 +163,6 @@ section {
             .location {
                 margin-right: 30px;
             }
-        }
-
-        .event.content {
-            padding: 0;
-            padding-left: 68px;
         }
     }
 }
