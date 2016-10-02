@@ -1,13 +1,13 @@
 {
     "profile": {
-        "webDeveloper": "Web Developer"
+        "webDeveloper": "Web developer"
     },
     "firstPage": {
         "showResume": "Show resume"
     },
     "about": {
         "title": "About me",
-        "text": "I'm a passionated developer since I was young, I spend a lot of time at my job and especially to my passion. I'm a follower of design, I therefore places great Je suis aussi un adepte du beau design, I therefore attaches much importance to the beauty of the code than the interface. I also like teamwork, this allows to share knowledge and learn to work together."
+        "text": "I have been a highly committed, tenacious and resilient passionate developer for ten years, taking care as much of the design of my interfaces as the clarity of my code. I am able to quickly take part in a team thanks to my great social skills and enthusiasm."
     },
     "contact": {
         "title": "Contact"
@@ -16,34 +16,36 @@
         "title": "Working experiences",
         "angular2Developer": {
             "title": "Angular 2 developer",
-            "textPart1": "Developing a responsive Facebook application, allowing users to calculate their psychological correlation with friends following their answers to a quiz.",
-            "textPart2": "Using the typescript language, with the framework 2 Angular and Facebook libraries, Firebase, Hammerjs, Semantic-UI."
+            "textPart1": "Development of a responsive Facebook application, allowing users to compute their psychological relationships with friends following their answers to a quiz.",
+            "textPart2": "Use of the typescript language, with the framework 2 Angular and Facebook libraries, Firebase, Hammerjs, Semantic-UI."
         },
         "phpDeveloper1": {
             "title": "PHP developer",
-            "textPart1": "Creating a startup whose project the realization of a web and mobile platform for a more modern course management and revisions.",
-            "textPart2": "Using PHP and Javascript."
+            "textPart1": "Foundation of a startup building a web and mobile platform for a more modern course management between pupils and teachers.",
+            "textPart2": "Use of PHP and Javascript."
         },
         "wordpressDeveloper": {
             "title": "Wordpress developer",
-            "textPart1": "Realization of a Wordpress site for a client.",
-            "textPart2": "Wordpress development of specific modules to support."
+            "textPart1": "Design of a Wordpress website for a customer.",
+            "textPart2": "Development of custom Wordpress modules to fit the customer's needs."
         },
         "phpDeveloper2": {
             "title": "PHP developer",
-            "textPart1": "Design and development of an internal web platform to facilitate the management of applications.",
-            "textPart2": "Developed with PHP, Javascript and Ajax technology."
+            "textPart1": "Design and development of a web platform aiming for an easier hiring management.",
+            "textPart2": "Built with PHP, Javascript and Ajax technology."
         }
     },
     "educations": {
-        "title": "Educations",
+        "title": "Education",
         "licence": {
-            "title": "IT development license",
-            "text": "Obtaining title BAC + 3 Bachelor of Science in software development and computer networks within SUPINFO International University in Toulouse."
+            "school": "SUPINFO International University, Toulouse",
+            "title": "IT development Bachelor of Science (three years technical degree)",
+            "text": "Bachelor of Science in software development and computer networks."
         },
         "bac": {
-            "title": "Bachelor of science",
-            "text": "Obtaining scientific baccalaureate with honors in establishing Clément Marot, in Cahors."
+            "school": "Clément Marot secondary school",
+            "title": "High school diploma",
+            "text": "Scientific Baccalaureate with honors."
         }
     },
     "skills": {

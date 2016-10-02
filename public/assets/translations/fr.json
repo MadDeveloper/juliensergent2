@@ -1,13 +1,13 @@
 {
     "profile": {
-        "webDeveloper": "Développeur Web"
+        "webDeveloper": "Développeur web"
     },
     "firstPage": {
         "showResume": "Lire le CV"
     },
     "about": {
         "title": "À propos",
-        "text": "Je suis un développeur passionné depuis mon plus jeune âge, je consacre énormément de temps à mon travail et surtout à ma passion. Je suis aussi un adepte du beau design, j'accorde donc autant d'importance aux interfaces qu'au code. J'aime aussi travailler en équipe, cela permet de pouvoir partager nos connaissances et apprendre à collaborer."
+        "text": "Développeur passionné depuis plus de dix ans, je m’investis beaucoup dans mon travail en accordant autant d’importance au design de mes interfaces qu’à la clarté de mon code. J’apprécie également le travail en équipe, enrichissant tant sur le plan technique que social."
     },
     "contact": {
         "title": "Contact"
@@ -38,12 +38,14 @@
     "educations": {
         "title": "Études",
         "licence": {
+            "school": "SUPINFO International University, Toulouse",
             "title": "Licence développement informatique",
-            "text": "Obtention du titre BAC+3 Baschelor of Science en développement logiciels et réseaux informatique au sein de l’école SUPINFO International University, à Toulouse."
+            "text": "Obtention du titre BAC+3 Bachelor of Science en développement logiciels et réseaux informatique."
         },
         "bac": {
+            "school": "Lycée Clément Marot, Cahors",
             "title": "Baccalauréat scientifique",
-            "text": "Obtention du baccalauréat scientifique avec mention au sein de l’établissement Clément Marot, à Cahors."
+            "text": "Obtention du baccalauréat scientifique avec mention."
         }
     },
     "skills": {
