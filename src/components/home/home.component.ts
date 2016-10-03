@@ -3,7 +3,7 @@ import { Router, ActivatedRoute }       from '@angular/router'
 
 import { LangService }      from './../../services/lang.service'
 import { TitleService }     from './../../services/title.service'
-import { TranslateService } from 'ng2-translate/ng2-translate'
+import { TranslateService } from 'ng2-translate'
 
 import { Lang } from './../../entities/lang'
 

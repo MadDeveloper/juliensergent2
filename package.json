@@ -31,7 +31,7 @@
     "zone.js": "^0.6.23",
 
     "lodash": "^4.15.0",
-    "ng2-translate": "^2.5.0"
+    "ng2-translate": "^3.0.0"
   },
   "devDependencies": {
     "concurrently": "^3.0.0",

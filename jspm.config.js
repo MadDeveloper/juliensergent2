@@ -24,11 +24,11 @@
       '@angular/router':                    'npm:@angular/router/bundles/router.umd.js',
       '@angular/forms':                     'npm:@angular/forms/bundles/forms.umd.js',
       // other libraries
-      'rxjs':                       'npm:rxjs',
+      rxjs:                       'npm:rxjs',
       'angular2-in-memory-web-api': 'npm:angular2-in-memory-web-api',
-      'ng2-translate':              'npm:ng2-translate',
-      'firebase':                   'npm:firebase/firebase.js',
-      'lodash':                     'npm:lodash'
+      firebase:                   'npm:firebase/firebase.js',
+      lodash:                     'npm:lodash',
+      'ng2-translate':              'npm:ng2-translate/bundles/ng2-translate.js'
     },
     // packages tells the System loader how to load when no filename and/or no extension
     packages: {

@@ -2,7 +2,7 @@ import { Component, OnInit, Input } from '@angular/core'
 import { Router, NavigationEnd }    from '@angular/router'
 
 import { LangService }      from './../../services/lang.service'
-import { TranslateService } from 'ng2-translate/ng2-translate'
+import { TranslateService } from 'ng2-translate'
 
 @Component({
     moduleId: module.id,
