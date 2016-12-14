@@ -7,8 +7,8 @@ import { TranslateService } from 'ng2-translate'
 @Component({
     moduleId: module.id,
     selector:  'app',
-    templateUrl: 'app.component.html',
-    styleUrls: [ 'app.component.css' ]
+    templateUrl: 'public/components/app/app.component.html',
+    styleUrls: [ 'public/components/app/app.component.css' ]
 })
 export class AppComponent implements OnInit {
     constructor(

@@ -10,8 +10,8 @@ import { Lang } from './../../entities/lang'
 @Component({
     moduleId: module.id,
     selector: 'home',
-    templateUrl: 'home.component.html',
-    styleUrls: [ 'home.component.css' ]
+    templateUrl: 'public/components/home/home.component.html',
+    styleUrls: [ 'public/components/home/home.component.css' ]
 })
 export class HomeComponent implements OnInit {
     facebookUserLogged: any
